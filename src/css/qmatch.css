@@ -1,0 +1,285 @@
+.quizMatch-container {
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.quizMatch-container .left {
+    width: calc(100%/3*2);
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.quizMatch-container .right {
+    width: calc(100%/3);
+    height: 100%;
+    /*position: absolute;*/
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.quizMatch-container .right:empty {
+    position: absolute;
+}
+
+.quizMatch-container .right .rightInner {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: dotted 1px #006575;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.quizMatch-container .right .rightInner::after
+{
+    height: 70px;
+    content: '';
+    display: block;
+}
+
+.rightItem {
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+    margin: 0 0 5px 0;
+    color: #000000;
+}
+
+.rightItem .contentArea {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+
+.rightItem .contentArea .content {
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    padding: 0 0.25em 0 0.25em;
+    cursor: grab;
+    cursor: -webkit-grab;
+    -webkit-border-radius: 0 0.5em 0.5em 0;
+    -moz-border-radius: 0 0.5em 0.5em 0;
+    border-radius: 0 0.5em 0.5em 0;
+    background-color: #d9e8ea;
+    vertical-align: top;
+    width: calc(100% - 28px);
+    word-wrap: break-word;
+    white-space: normal;
+    border-right: solid 1px #d9e8ea;
+    border-top: solid 1px #d9e8ea;
+    border-bottom: solid 1px #d9e8ea;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.rightItem .contentArea .placeholder {
+    display: inline-block;
+    width: 28px;
+    min-width: 28px;
+    background-color: transparent;
+}
+
+.rightItem .contentArea .placeholder .gap {
+    width: 32px;
+    height: 32px;
+    -webkit-border-radius: 4em;
+    -moz-border-radius: 4em;
+    border-radius: 4em;
+    background-color: #d9e8ea;
+    position: absolute;
+    /*position will be relative to .questionDiv*/
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    z-index: 0;
+    cursor: grab;
+    cursor: -webkit-grab;
+}
+
+.rightItem .on {
+    background-color: #E0E0E0;
+}
+
+.rightItem:hover>.contentArea .placeholder .gap,
+.rightItem:hover>.contentArea .content {
+    box-shadow: 2px 2px 3px #ABABAB;
+}
+
+.leftItem {
+    position: relative;
+    vertical-align: middle;
+    color: #ffffff;
+    width: 100%;
+    margin: 0 0 5px 0;
+}
+
+.leftItem .mappingArea:empty {
+    position: absolute;
+    vertical-align: top;
+    display: inline-block;
+    width: calc(50% - 14px);
+    -webkit-border-radius: 0 0.5em 0.5em 0;
+    -moz-border-radius: 0 0.5em 0.5em 0;
+    border-radius: 0 0.5em 0.5em 0;
+    border-right: dotted 1px #006575;
+    border-top: dotted 1px #006575;
+    border-bottom: dotted 1px #006575;
+    height: 100%;
+    /*background: #E0E0E0;*/
+    box-sizing: border-box;
+    left: calc(50% + 14px);
+}
+
+.leftItem .mappingArea {
+    vertical-align: top;
+    display: inline-block;
+    width: calc(50% + 14px);
+    -webkit-border-radius: 0 0.5em 0.5em 0;
+    -moz-border-radius: 0 0.5em 0.5em 0;
+    border-radius: 0 0.5em 0.5em 0;
+    border-right: dotted 1px #006575;
+    border-top: dotted 1px #006575;
+    border-bottom: dotted 1px #006575;
+    height: 100%;
+    /*background: #E0E0E0;*/
+    box-sizing: border-box;
+    position: relative;
+    left: calc(50% - 14px);
+}
+
+.leftItem .mappingArea .rightItem {
+    margin: 0;
+}
+
+.leftItem .mappingArea .rightItem .contentArea {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    -webkit-border-radius: 0 0.5em 0.5em 0;
+    -moz-border-radius: 0 0.5em 0.5em 0;
+    border-radius: 0 0.5em 0.5em 0;
+}
+
+.leftItem .mappingArea .rightItem .content {
+    background: #d9e8ea;
+    -webkit-border-radius: 0 0.5em 0.5em 0;
+    -moz-border-radius: 0 0.5em 0.5em 0;
+    border-radius: 0 0.5em 0.5em 0;
+    cursor: grab;
+    cursor: -webkit-grab;
+}
+
+.leftItem .mappingArea .rightItem .contentArea .placeholder {
+    background-color: transparent;
+}
+
+.leftItem .mappingArea .rightItem .contentArea .gap {
+    background: #d9e8ea;
+    cursor: grab;
+    cursor: -webkit-grab;
+}
+
+.leftItem .mappingArea:empty::before,
+.right .rightInner:empty::before {
+    content: 'DROP HERE';
+    color: #000000;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    opacity: 0.3;
+}
+
+.leftItem .contentArea::before {
+    position: absolute;
+    height: 100%;
+    content: '';
+    display: inline-block;
+}
+
+.leftItem .contentArea {
+    background-color: #006575;
+    display: inline-block;
+    border-left: solid 1px #006575;
+    border-top: solid 1px #006575;
+    border-bottom: solid 1px #006575;
+    -webkit-border-radius: 0.5em 0 0 0.5em;
+    -moz-border-radius: 0.5em 0 0 0.5em;
+    border-radius: 0.5em 0 0 0.5em;
+    width: calc(50% + 14px);
+    vertical-align: top;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.leftItem .contentArea .content {
+    /*min-height: 70px;*/
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 0.5em;
+    cursor: initial;
+    -webkit-border-radius: 0.5em 0 0 0.5em;
+    -moz-border-radius: 0.5em 0 0 0.5em;
+    border-radius: 0.5em 0 0 0.5em;
+    background-color: #006575;
+    vertical-align: top;
+    width: calc(100% - 28px);
+    word-wrap: break-word;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+.leftItem .contentArea .placeholder {
+    display: inline-block;
+    width: 28px;
+    background-color: #006575;
+    z-index: 1;
+    vertical-align: top;
+}
+
+.leftItem .contentArea .placeholder .gap {
+    width: 32px;
+    height: 32px;
+    -webkit-border-radius: 4em;
+    -moz-border-radius: 4em;
+    border-radius: 4em;
+    background-color: #FFFFFF;
+    position: absolute;
+    /*position will be relative to .questionDiv*/
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    z-index: 0;
+}
+
+@media screen and (max-width:346px) {
+    .leftItem .mappingArea:empty::before {
+        content: 'DROP';
+    }
+}
+
+@media screen and (max-width:205px) {
+    .leftItem .mappingArea:empty::before {
+        content: 'D';
+    }
+}

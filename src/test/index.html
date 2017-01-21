@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/qmatch.css">
+    <style>
+        html {
+            height: 100%;
+        }
+        
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+        }
+    </style>
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../bower_components/jquery-load-template/dist/jquery.loadTemplate.js"></script>
+    <script type="text/javascript" src="../extention/quizMatch.js"></script>
+    <script type="text/javascript" src="matchingData.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#test').aylquizmatch({
+                data: data
+            });
+
+            $('#testBtn').click(function (e) {
+                var data = $('#test').aylquizmatch('getData');
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div id='test' class="quizMatch-container"></div>
+    <div style="position: relative;">
+        <button id="testBtn">Test</button>
+    </div>
+</body>
+
+</html>
