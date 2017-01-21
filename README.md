@@ -11,3 +11,4 @@ This library requires jQuery and [jQuery template engine](https://github.com/cod
      });
 ```
 The result of plugin is like:
+![alt tag](https://github.com/yasirliu/jquery-quizmatch/blob/master/src/test/result.PNG)
