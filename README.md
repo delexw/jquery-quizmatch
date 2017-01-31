@@ -8,7 +8,8 @@ jQuery Quiz Match is a greater level jQuery plugin. It is not a common used plug
 - jQuery Plugin registered as an AMD
 - Customizable
 - Cross browser support
-- html template support
+- Html template support
+- Responsive UI
 
 ## Basic usage
 
