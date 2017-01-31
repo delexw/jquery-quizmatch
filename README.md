@@ -18,8 +18,7 @@ This library requires jQuery and [jQuery template engine](https://github.com/cod
 - Pass JSON data as part of the options of quiz match to init the UI
 ```
      <div id='test' class="quizMatch-container"></div>
-     
-     $('#test').aylquizmatch({
+          $('#test').aylquizmatch({
            data: matchData
      });
      
@@ -77,7 +76,7 @@ Options can be accessed by $.fn.aylquizmatch.default
 ## Customizable
 1. If you want to choose another template engin for the plugin, you are able to use your own logic to load templates by overwriting method $.fn.aylquizmatch.default.utilities.loadTemplates. 
 2. If you want to use drag and drop API provided by 3rd party, for instance jQueryUI, overwrite $.fn.aylquizmatch.draggable and $.fn.aylquizmatch.droppable in order to execute your own binding for the two events.
-  
+
 ## TODO
 1. make template option work
 2. use Gulp to complie and release it
